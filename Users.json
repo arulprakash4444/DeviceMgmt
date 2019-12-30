@@ -1,0 +1,64 @@
+{
+  "Users": [
+    {
+      "vid": "v-arupra@microsoft.com",
+      "name": "arul",
+      "team": "officelens"
+    },
+    {
+      "vid": "v-amvutu@microsoft.com",
+      "name": "amulya",
+      "team": "wxp"
+    },
+    {
+      "vid": "v-teboy@microsoft.com",
+      "name": "tejaswi",
+      "team": "wxp"
+    },
+    {
+      "vid": "v-souma@microsoft.com",
+      "name": "soujanya",
+      "team": "officelens"
+    },
+    {
+      "vid": "v-lajujj@microsoft.com",
+      "name": "lavanya",
+      "team": "kaizala"
+    },
+    {
+      "vid": "v-jokoth@microsoft.com",
+      "name": "joshitha",
+      "team": "kaizala"
+    },
+    {
+      "vid": "v-padm@microsoft.com",
+      "name": "padmini",
+      "team": "wxp"
+    },
+    {
+      "vid": "v-juliv@microsoft.com",
+      "name": "juliet",
+      "team": "kaizala"
+    },
+    {
+      "vid": "v-pranac@microsoft.com",
+      "name": "pranaya",
+      "team": "wxp"
+    },
+    {
+      "vid": "v-motall@microsoft.com",
+      "name": "mounika",
+      "team": "wxp"
+    },
+    {
+      "vid": "v-chered@microsoft.com",
+      "name": "chetan",
+      "team": "wxp"
+    },
+    {
+      "vid": "inlocker",
+      "name": "None",
+      "team": "None"
+    }
+  ]
+}

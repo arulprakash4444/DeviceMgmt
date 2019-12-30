@@ -1,0 +1,444 @@
+{
+  "Devices": [
+    {
+      "device_type": "Phone",
+      "name": "iphone6",
+      "table": "ios",
+      "os_version": "11",
+      "asset_id": "some_number",
+      "serial_num": "some_number"
+    },
+    {
+      "device_type": "Phone",
+      "name": "iphone6s",
+      "table": "ios",
+      "os_version": "10.3.2",
+      "asset_id": "some_number",
+      "serial_num": "some_number"
+    },
+    {
+      "device_type": "Phone",
+      "name": "iphone6splus",
+      "table": "ios",
+      "os_version": "13.1",
+      "asset_id": "some_number",
+      "serial_num": "some_number"
+    },
+    {
+      "device_type": "Phone",
+      "name": "iphonese",
+      "table": "ios",
+      "os_version": "13.1.3",
+      "asset_id": "some_number",
+      "serial_num": "some_number"
+    },
+    {
+      "device_type": "Phone",
+      "name": "iphone7",
+      "table": "ios",
+      "os_version": "13",
+      "asset_id": "some_number",
+      "serial_num": "some_number"
+    },
+    {
+      "device_type": "Phone",
+      "name": "iphone7plus",
+      "table": "ios",
+      "os_version": "12.4",
+      "asset_id": "some_number",
+      "serial_num": "some_number"
+    },
+    {
+      "device_type": "Phone",
+      "name": "iphone8",
+      "table": "ios",
+      "os_version": "11.3",
+      "asset_id": "some_number",
+      "serial_num": "some_number"
+    },
+    {
+      "device_type": "Phone",
+      "name": "iphone8plus",
+      "table": "ios",
+      "os_version": "12.3.1",
+      "asset_id": "some_number",
+      "serial_num": "some_number"
+    },
+    {
+      "device_type": "Phone",
+      "name": "iphonex",
+      "table": "ios",
+      "os_version": "12",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Phone",
+      "name": "iphonexsmax",
+      "table": "ios",
+      "os_version": "13.1",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Phone",
+      "name": "iphonexr",
+      "table": "ios",
+      "os_version": "12.4.1",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Phone",
+      "name": "samsunggalaxynote4",
+      "table": "android",
+      "os_version": "4.4.4",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Phone",
+      "name": "motog",
+      "table": "android",
+      "os_version": "5.0.2",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Phone",
+      "name": "oneplus5",
+      "table": "android",
+      "os_version": "7.1.1",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Phone",
+      "name": "huaweihonor8x",
+      "table": "android",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Phone",
+      "name": "oppof9",
+      "table": "android",
+      "os_version": "8.1.2",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Phone",
+      "name": "samsunggalaxys7edge",
+      "table": "android",
+      "os_version": "8.0.0",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Phone",
+      "name": "pixel3",
+      "table": "android",
+      "os_version": "9",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Phone",
+      "name": "samsunggalaxys7",
+      "table": "android",
+      "os_version": "7",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Tablet",
+      "name": "ipadpro10.5",
+      "table": "ios",
+      "os_version": "13",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Tablet",
+      "name": "ipadpro12.9",
+      "table": "ios",
+      "os_version": "13.1.3",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Tablet",
+      "name": "ipadmini4",
+      "table": "ios",
+      "os_version": "10",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Tablet",
+      "name": "ipadpro12.9_#2",
+      "table": "ios",
+      "os_version": "11",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Cable",
+      "name": "ioscablewhite_#1",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Cable",
+      "name": "ioscablewhite_#2",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Cable",
+      "name": "ioscablewhite_#3",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Cable",
+      "name": "ioscablewhite_#4",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Cable",
+      "name": "ioscablewhite_#5",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Cable",
+      "name": "ioscablewhite_#6",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Cable",
+      "name": "ioscablewhite_#7",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Cable",
+      "name": "ioscablewhite_#8",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Cable",
+      "name": "ioscablewhite_#9",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Cable",
+      "name": "ioscablegold_#1",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Cable",
+      "name": "ioscablegold_#2",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Adapter",
+      "name": "adapter_#1",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Adapter",
+      "name": "adapter_#2",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Adapter",
+      "name": "adapter_#3",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Adapter",
+      "name": "adapter_#4",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Adapter",
+      "name": "adapter_#5",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Adapter",
+      "name": "adapter_#6",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Adapter",
+      "name": "adapter_#7",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Adapter",
+      "name": "adapter_#8",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "earphone",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "applepencil",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "keyboard",
+      "table": "ios",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "ctypecable(red)",
+      "table": "android",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "ctypecable(gold)_#1",
+      "table": "android",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "ctypecable(gold)_#2",
+      "table": "android",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "ctypecable(grey)",
+      "table": "android",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "ctypecable(black)",
+      "table": "android",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "btypecable(blue)_#1",
+      "table": "android",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "btypecable(blue)_#2",
+      "table": "android",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "btypecable(blue)_#3",
+      "table": "android",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "btypecable(white)_#1",
+      "table": "android",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    },
+    {
+      "device_type": "Accessories",
+      "name": "btypecable(white)_#2",
+      "table": "android",
+      "os_version": "None",
+      "asset_id": "None",
+      "serial_num": "None"
+    }
+  ]
+}
