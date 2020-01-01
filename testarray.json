@@ -1,0 +1,29 @@
+{
+  "Table-ios": [
+    {
+      "No": "1",
+      "Device_Name": "iphonese",
+      "Alias": "v-arupra@microsoft.com",
+      "Team": "officelens"
+    },
+    {
+      "No": "2",
+      "Device_Name": "iphone6",
+      "Alias": "v-amvutu@microsoft.com",
+      "Team": "wxp"
+    },
+    {
+      "No": "3",
+      "Device_Name": "iphone7",
+      "Alias": "v-sajara@microsoft.com",
+      "Team": "kaizala"
+    },
+    {
+      "No": "4",
+      "Device_Name": "iphone8",
+      "Alias": "v-chered@microsoft.com",
+      "Team": "visio"
+    }
+  ]
+
+}
