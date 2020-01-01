@@ -12,9 +12,11 @@ def createXL(name):
     print("Created "+ filename +"!")
 
 
-# createXL("XLarrayTest")
+# createXL(file)
 
-wb = openpyxl.load_workbook("XLarrayTest.xlsx")
+file = "test123.xlsx"
+
+wb = openpyxl.load_workbook(file)
 sheet = wb.active
 
 
@@ -23,7 +25,7 @@ def XLhorizontalPrinter(array, rowNumber):
         sheet.cell(row = rowNumber ,column = i+1).value = element
 
 
-for i in range(1, len(TheArray)):
+for i in range(1, len(TheArray) + 1):
     XLhorizontalPrinter(TheArray[i - 1], i)
 
-wb.save("XLarrayTest.xlsx")
+wb.save(file)

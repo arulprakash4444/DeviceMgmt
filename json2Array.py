@@ -1,6 +1,6 @@
 import json
 import openpyxl
-from prettytable import PrettyTable
+import array2pt
 
 #TheArray
 TheArray = []
@@ -50,17 +50,9 @@ for Item in data["Table-ios"]:
     # pt.add_row(array)
 
 
-def TheArray2PT(Array):
-    pt = PrettyTable()
-    pt.field_names = Array[0]
-    for i in range(1, len(Array)):
-        pt.add_row(Array[i])
-
-    print(pt)
 
 
-TheArray2PT(TheArray)
-print(TheArray)
+array2pt.TheArray2PT(TheArray)
 
 # pt.add_row(list(Item.values()))
 # variable = prepare(data["Table-ios"][1])
