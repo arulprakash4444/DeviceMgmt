@@ -1,28 +1,34 @@
 {
-  "Table-ios": [
+  "relation": [
     {
-      "No": "1",
       "Device_Name": "iphonese",
       "Alias": "v-arupra@microsoft.com",
-      "Team": "officelens"
+      "Team": "officelens",
+      "Table": "ios"
     },
     {
-      "No": "2",
-      "Device_Name": "iphone6",
+      "Device_Name": "ctypecable(gold)_#1",
       "Alias": "v-amvutu@microsoft.com",
-      "Team": "wxp"
+      "Team": "wxp",
+      "Table": "android"
     },
     {
-      "No": "3",
       "Device_Name": "iphone7",
       "Alias": "v-sajara@microsoft.com",
-      "Team": "kaizala"
+      "Team": "kaizala",
+      "Table": "ios"
     },
     {
-      "No": "4",
-      "Device_Name": "iphone8",
+      "Device_Name": "oneplus5",
       "Alias": "v-chered@microsoft.com",
-      "Team": "visio"
+      "Team": "visio",
+      "Table": "android"
+    },
+    {
+      "Device_Name": "huaweihonor8x",
+      "Alias": "v-chered@microsoft.com",
+      "Team": "inlocker",
+      "Table": "android"
     }
   ]
 

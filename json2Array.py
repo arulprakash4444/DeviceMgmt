@@ -1,21 +1,9 @@
 import json
 import openpyxl
 import array2pt
+import jsonDeviceSorter
 
-#TheArray
-TheArray = []
-
-# opening the file
-with open("testarray.json", "r") as f:
-    data = json.load(f)
-
-# columns to display
-attribs = ["No", "Device_Name", "Alias", "Team"]
-TheArray.append(attribs)
-
-# # tables precursor
-# pt = PrettyTable()
-# pt.field_names = attribs
+#standAlone
 
 # # columns to delete
 # delKeys =["No"]
@@ -27,6 +15,7 @@ TheArray.append(attribs)
 #         del item[attrib]
 
 
+# order or remove column according to attribs (! Duplication column not allowed b'coz of prettytable)
 def prepare(item):
     ordered_array = []
     for attrib in attribs:
@@ -40,32 +29,76 @@ def prepare(item):
 #     deldictkv(Item)
 
 
-# for Item in data["Table-ios"]:
-#     print(Item)
+# if dict has table == ios/android send item to prepare() and put in respective array
+def separate(item):
+    if item["Table"] == "ios":
+        array = prepare(item)
+        iosArray.append(array)
+
+    elif item["Table"] == "android":
+        array = prepare(item)
+        androidArray.append(array)
 
 
-for Item in data["Table-ios"]:
-    array = prepare(Item)
-    TheArray.append(array)
-    # pt.add_row(array)
+# to add "No" as 0th element[0th element] and numbers thereafter
+def addNo(array):
+    array[0].insert(0, "No")
+
+    for i in range(1, len(array)):
+        array[i].insert(0, i)
+
+
+def json2array(file):
+    global iosArray
+    iosArray = []
+
+    global androidArray
+    androidArray = []
+
+    # opening the file
+    filename = file
+    with open(filename, "r") as f:
+        data = json.load(f)
+
+    # columns to display
+    global attribs
+    attribs = ["Alias", "Device_Name", "Team"]
+
+    # to identify the Device_Name index
+    Device_Name_index = attribs.index("Device_Name")
+
+    for Item in data["relation"]:
+        separate(Item)
+
+    iosArray_sorted = jsonDeviceSorter.arrayDepSort(iosArray, Device_Name_index, "ios")
+    androidArray_sorted = jsonDeviceSorter.arrayDepSort(androidArray, Device_Name_index, "android")
+
+    # inserting attribs as first element
+    iosArray_sorted.insert(0, attribs)
+    androidArray_sorted.insert(0, attribs[:])
+
+    addNo(iosArray_sorted)
+    addNo(androidArray_sorted)
+
+
+    print("iOS Table")
+    array2pt.TheArray2PT(iosArray_sorted)
+    print(" ")
+    print("============")
+    print(" ")
+    print("Android Table")
+    array2pt.TheArray2PT(androidArray_sorted)
 
 
 
+# if __name__ == "__main__":
+#     json2array("testarray.json")
 
-array2pt.TheArray2PT(TheArray)
 
-# pt.add_row(list(Item.values()))
-# variable = prepare(data["Table-ios"][1])
+# json2array("testarray.json")
 
-# for Item in data["Table-ios"]:
-#     print(Item)
-
-# print(pt)
-# print(pt.field_names)
-# print(pt.attributes)
 
 # process
 # 1. getting the dic(item) from the json array.
 # 2. deleting the cloumns from the array.
 # 3. passing that deleted column dict(item) to rearrange it will remove the keys and pass the reordered array to table printing
-

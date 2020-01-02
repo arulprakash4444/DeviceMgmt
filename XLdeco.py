@@ -111,5 +111,5 @@ def itStartsHere(name, table):
 
 
 
-if __name__ == "__main__":
-    itStartsHere(filename, tabletype)
+# if __name__ == "__main__":
+#     itStartsHere(filename, tabletype)
