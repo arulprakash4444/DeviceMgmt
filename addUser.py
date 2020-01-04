@@ -5,10 +5,10 @@ import json
 # ADDING A NEW PERSON
 # ===================
 
-UserAttributes = ["vid", "name", "team"]
-teams = ["officelens", "wxp","kaizala", "visio"]
+UserAttributes = ["Alias", "Name", "Team"]
+Teams = ["officelens", "wxp","kaizala", "visio"]
 
-Attr2Array = {"team":teams}
+Attr2Array = {"Team":Teams}
 
 def slc(string):
     string = string.replace(" ", "")
@@ -30,7 +30,7 @@ def makeUser():
     User = {}
     
     for UserAttribute in UserAttributes:
-        if UserAttribute in ["team"]:
+        if UserAttribute in ["Team"]:
             User[UserAttribute] = typeselect(Attr2Array[UserAttribute], "\nEnter a "+UserAttribute, "Enter "+UserAttribute+" number")
 
         else:

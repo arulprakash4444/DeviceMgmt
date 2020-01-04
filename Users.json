@@ -1,64 +1,64 @@
 {
   "Users": [
     {
-      "vid": "v-arupra@microsoft.com",
-      "name": "arul",
-      "team": "officelens"
+      "Alias": "v-arupra",
+      "Name": "arul",
+      "Team": "officelens"
     },
     {
-      "vid": "v-amvutu@microsoft.com",
-      "name": "amulya",
-      "team": "wxp"
+      "Alias": "v-amvutu",
+      "Name": "amulya",
+      "Team": "wxp"
     },
     {
-      "vid": "v-teboy@microsoft.com",
-      "name": "tejaswi",
-      "team": "wxp"
+      "Alias": "v-teboy",
+      "Name": "tejaswi",
+      "Team": "wxp"
     },
     {
-      "vid": "v-souma@microsoft.com",
-      "name": "soujanya",
-      "team": "officelens"
+      "Alias": "v-souma",
+      "Name": "soujanya",
+      "Team": "officelens"
     },
     {
-      "vid": "v-lajujj@microsoft.com",
-      "name": "lavanya",
-      "team": "kaizala"
+      "Alias": "v-lajujj",
+      "Name": "lavanya",
+      "Team": "kaizala"
     },
     {
-      "vid": "v-jokoth@microsoft.com",
-      "name": "joshitha",
-      "team": "kaizala"
+      "Alias": "v-jokoth",
+      "Name": "joshitha",
+      "Team": "kaizala"
     },
     {
-      "vid": "v-padm@microsoft.com",
-      "name": "padmini",
-      "team": "wxp"
+      "Alias": "v-padm",
+      "Name": "padmini",
+      "Team": "wxp"
     },
     {
-      "vid": "v-juliv@microsoft.com",
-      "name": "juliet",
-      "team": "kaizala"
+      "Alias": "v-juliv",
+      "Name": "juliet",
+      "Team": "kaizala"
     },
     {
-      "vid": "v-pranac@microsoft.com",
-      "name": "pranaya",
-      "team": "wxp"
+      "Alias": "v-pranac",
+      "Name": "pranaya",
+      "Team": "wxp"
     },
     {
-      "vid": "v-motall@microsoft.com",
-      "name": "mounika",
-      "team": "wxp"
+      "Alias": "v-motall",
+      "Name": "mounika",
+      "Team": "wxp"
     },
     {
-      "vid": "v-chered@microsoft.com",
-      "name": "chetan",
-      "team": "wxp"
+      "Alias": "v-chered",
+      "Name": "chetan",
+      "Team": "wxp"
     },
     {
-      "vid": "inlocker",
-      "name": "None",
-      "team": "None"
+      "Alias": "locker",
+      "Name": "--",
+      "Team": "--"
     }
   ]
 }

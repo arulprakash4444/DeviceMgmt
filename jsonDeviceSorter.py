@@ -9,10 +9,10 @@ def get_by_type(table, emptyarray):
         Temp = []
         for item in data["Devices"]:
 
-            if item["table"] == table:
+            if item["Table"] == table:
 
-                if item["device_type"] == device_type:
-                    Temp.append(item["name"])
+                if item["Device_Type"] == device_type:
+                    Temp.append(item["Device_Name"])
 
         emptyarray.append(Temp)
 
@@ -51,7 +51,6 @@ def DeviceSort():
     android_sorted = merge_subs(androiddev)
 
 
-
 def arrayDepSort(array, index, table):
 
     DeviceSort()
@@ -70,9 +69,19 @@ def arrayDepSort(array, index, table):
             if i in j[index]:
 
                 sorted_array.append(j)
+                array.remove(j)
 
     return sorted_array
     
 
 # if __name__ == "__main__":
 #     arrayDepSort(array, index, table)
+
+
+# DEVNAMEIND = 0
+# vari = arrayDepSort(IOSARRAY, 0, 'ios')
+
+# # for i in vari:
+# #     print(i)
+
+# IOSREFORDER = ['iphone6', 'iphone6s', 'iphone6splus', 'iphone7', 'iphone7plus', 'iphone8', 'iphone8plus', 'iphonese', 'iphonex', 'iphonexr', 'iphonexsmax', 'ipadmini4', 'ipadpro10.5', 'ipadpro12.9', 'ipadpro12.9_#2', 'ioscablegold_#1', 'ioscablegold_#2', 'ioscablewhite_#1', 'ioscablewhite_#2', 'ioscablewhite_#3', 'ioscablewhite_#4', 'ioscablewhite_#5', 'ioscablewhite_#6', 'ioscablewhite_#7', 'ioscablewhite_#8', 'ioscablewhite_#9', 'adapter_#1', 'adapter_#2', 'adapter_#3', 'adapter_#4', 'adapter_#5', 'adapter_#6', 'adapter_#7', 'adapter_#8', 'applepencil', 'earphone', 'keyboard']

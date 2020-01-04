@@ -6,11 +6,11 @@ import json
 # ADDING A NEW DEVICE
 # ===================
 
-DeviceAttributes = ["device_type", "name", "table", "os_version", "asset_id", "serial_num"]
-device_types = ["Phone", "Tablet", "Cable", "Adapter", "Accessories"]
-tables = ["ios", "android"]
+DeviceAttributes = ["Device_Type", "Device_Name", "Table", "OS_Version", "Asset_ID", "Serial_Num"]
+Device_Types = ["Phone", "Tablet", "Cable", "Adapter", "Accessories"]
+Tables = ["ios", "android"]
 
-Attr2Array = {"device_type":device_types,"table":tables}
+Attr2Array = {"Device_Type":Device_Types,"Table":Tables}
 
 def slc(string):
     string = string.replace(" ", "")
@@ -32,13 +32,13 @@ def makeDevice():
     Device = {}
     
     for DeviceAttribute in DeviceAttributes:
-        if DeviceAttribute in ["device_type", "table"]:
+        if DeviceAttribute in ["Device_Type", "Table"]:
             Device[DeviceAttribute] = typeselect(Attr2Array[DeviceAttribute], "\nEnter a "+DeviceAttribute, "Enter "+DeviceAttribute+" number")
 
         else:
             Device[DeviceAttribute] = input("\nEnter the "+DeviceAttribute+":")
             if Device[DeviceAttribute] == "":
-                Device[DeviceAttribute] = "None"
+                Device[DeviceAttribute] = "--"
 
     return Device
 

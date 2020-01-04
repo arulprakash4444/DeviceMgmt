@@ -57,14 +57,14 @@ def change4All(size = 11, name="Times New Roman"):
 
 
 
-def inlocker(color):
+def locker(color):
     aliasColNum = 0
     for i in range(1, maxColumn+1):
         if sheet.cell(row=1, column=i).value == "Alias":
             aliasColNum = i
 
     for j in range(2, maxRow+1):
-        if sheet.cell(row=j, column=aliasColNum).value == "inlocker":
+        if sheet.cell(row=j, column=aliasColNum).value == "locker":
 
             fillattrib = PatternFill(start_color=color, end_color=color, fill_type = "solid")
             sheet.cell(row = j, column = aliasColNum).fill = fillattrib
@@ -105,7 +105,7 @@ def itStartsHere(name, table):
     Painter(accent)
     change4All()
     XLheader(header)
-    inlocker(green)
+    locker(green)
 
     wb.save(filename)
 

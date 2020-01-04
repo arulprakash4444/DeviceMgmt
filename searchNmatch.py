@@ -1,7 +1,22 @@
 import json
-import pprint
 
-def simpleSearch(fileName, searchString, fieldName):
+def jsonarraylen(filename):
+
+    with open(filename + ".json", "r") as f:
+        data = json.load(f)
+
+    return len(data[filename])
+
+
+
+def slc(string):
+    string = string.replace(" ", "")
+    string = string.lower()
+    return string
+
+
+# simpleSearch("Devices", "iphonese", "name", returnUser flag)
+def simpleSearch(fileName, searchString, fieldName, returnUser = 0):
     foundFlag = 0
 
     with open(fileName+".json", "r") as f:
@@ -10,43 +25,135 @@ def simpleSearch(fileName, searchString, fieldName):
             if item[fieldName] == searchString:
                 print(item, end="\n") 
                 foundFlag = 1
-                return item
+
+                if returnUser == 1:
+                    return (item, item["Alias"])
+
+                else:
+                    return item
+
         
         if foundFlag == 0:
             print("Item not found!")
             return -1
 
-# simpleSearch("Devices", "iphonese", "name")
+
+def dictMerge(dict1, dict2):
+    result = {**dict1, **dict2}
+    return result
+
+
+def eraseEntry(Entry):
+    print("Opening testarray.json in read mode...")
+    with open("testarray.json") as f:
+        print("Loading the data...")
+        data = json.load(f)
+
+        print("Erasing the Entry")
+        deletedItem = data["testarray"].pop(data["testarray"].index(Entry))
+        
+        print("Opening testarray.json in write mode...")
+        with open("testarray.json", "w") as f:
+            print("Dumping the data...")
+            json.dump(data, f, indent=2)
+            print("Write Finished!")
+
+        print("\n Deleted Entry('s):")
+        print(deletedItem)
+
+
+def writeEntry(Entry):
+    print("Opening testarray.json in read mode...")
+    with open("testarray.json") as f:
+        print("Loading the data...")
+        data = json.load(f)
+
+    print("Appending the device...")
+    data["testarray"].append(Entry)
+
+    print("Opening testarray.json in write mode...")
+    with open("testarray.json", "w") as f:
+        print("Dumping the data...")
+        json.dump(data, f, indent=2)
+        print("Write Finished!")
+
+
+def SearchAndMatch():
+    device = input("enter the device:")
+    devicedata = simpleSearch("testarray", device, "Device_Name", 1)
+
+    if devicedata != -1:
+        print("The device is assigned to " + devicedata[1], end="\n")
+        user = input("Enter the Alias:")
+        userdata = simpleSearch("Users", user, "Alias")
+
+        if userdata != -1:
+            
+            while(True):
+                choice = input("Are you sure you want to assign "+ device + " to "+ user +"?(y/n):")
+                if slc(choice) == "y" or slc(choice) == "yes":
+                    eraseEntry(devicedata[0])
+                    entry = dictMerge(simpleSearch("Devices", device, "Device_Name"), userdata)
+                    writeEntry(entry)
+                    break
+
+                elif slc(choice) == "n" or slc(choice) == "no":
+                    print("Exiting Write to testarray.json...")
+                    break
+
+                else:
+                    pass
+
+
+def inLocker(Device):
+
+    Data = simpleSearch("testarray", Device["Device_Name"], "Device_Name", 1)
+    
+    if Data:
+
+        if Data[0]["Alias"] != "locker":
+            print("The device "+ Device["Device_Name"] +" is already assigned to " + Data[1] +"!")
+
+            while(True):
+                choice = input("Are you sure you want to assign "+ Device["Device_Name"] + " to locker?(y/n):")
+                if slc(choice) == "y" or slc(choice) == "yes":
+                    eraseEntry(Data[0])
+                    entry = dictMerge(Device, simpleSearch("Users", "locker", "Alias"))
+                    writeEntry(entry)
+                    print("The device "+ Device["Device_Name"] +" is assigned to locker")
+                    break
+
+                elif slc(choice) == "n" or slc(choice) == "no":
+                    print("The device "+ Device["Device_Name"] +" is assigned to " + Data[1])
+                    print("Exiting Write to testarray.json...")
+                    break
+
+                else:
+                    pass
+
+        else:
+            pass
+
+    
+    else:
+        entry = dictMerge(Device, simpleSearch("Users", "locker", "Alias"))
+        writeEntry(entry)
 
 
 
-device = input("enter the device:")
-devicedata = simpleSearch("Devices", device, "name")
+def AllInLocker():
 
-# if devicedata != -1:
-user = input("Enter the v-id:")
-userdata = simpleSearch("Users", user, "vid")
+    with open("Devices.json", "r") as f:
+        data = json.load(f)
 
-TableAttributes = ["No", "Device_Name", "Device_Type", "Asset_ID", "Serial_Number", "Version", "Alias", "Name", "Team"]
+    for device in data["Devices"]:
+        inLocker(device)
 
-def MakeEntry():
-    Entry = {}
+# AllInLocker()
+# print(jsonarraylen("testarray"))
+# SearchAndMatch()
+# print(jsonarraylen("testarray"))
 
-    i = 0
-    Entry["No"] = i+1
-    Entry["Device_Name"] = devicedata["name"]
-    Entry["Device_Type"] = devicedata["device_type"]
-    Entry["Asset_ID"] = devicedata["asset_id"]
-    Entry["Serial_Number"] = devicedata["serial_num"]
-    Entry["Version"] = devicedata["os_version"]
-    Entry["Alias"] = userdata["vid"]
-    Entry["Name"] = userdata["name"]
-    Entry["Team"] = userdata["team"]
-
-    return Entry
-
-DATA = MakeEntry()
-print(DATA)
 
 
 
@@ -59,5 +166,3 @@ print(DATA)
 # Future
 # in BIST if file(Table-ios.json and Table-android.json) is not found create ios and android json according to the ORDER of devices with user as inlocker
 # if same device is used in more than one transaction while adding entry to a file should replace the existing device (i.e one file contains only one device)
-
-

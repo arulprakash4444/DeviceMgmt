@@ -1,13 +1,20 @@
 import openpyxl
 import XLdeco
+from datetime import date, datetime
 
 # (Example array) The Array will be got from json2Array.py
 TheArray = [['No', 'Device_Name', 'Alias', 'Team'], ['1', 'iphonese', 'v-arupra@microsoft.com', 'officelens'], ['2', 'iphone6', 'v-amvutu@microsoft.com', 'wxp'], ['3', 'iphone7', 'v-sajara@microsoft.com', 'kaizala'], ['4', 'iphone8', 'v-chered@microsoft.com', 'visio']]
 
 
-# def fileNameGen(table):
-    #  create name with "table + - + 02JAN2020 + - + time "
-    # return filename + .xlsx
+def fileNameGen(table):
+    
+    today = date.today()
+    DATE = today.strftime("%d%b%Y")
+    now = datetime.now()
+    current_time = now.strftime("%H-%M-%S")
+
+    FILENAME = table + " -- " + DATE + " -- " + current_time
+    return FILENAME + ".xlsx"
 
 
 def createXL(filename):
@@ -45,4 +52,4 @@ def array2excel(Array, table):
 
 
 # if __name__ == "__main__":
-#     array2excel(array)
+#     array2excel(array, table)

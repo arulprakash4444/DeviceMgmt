@@ -66,7 +66,7 @@ def eraseUser(user4Deletion):
 
 def removeUser():
     viewUsers()
-    userVid = input("Enter a user v-id to search:")
+    userVid = input("Enter a Alias to search:")
     theUser = simpleSearch(userVid)
     
     while(theUser != -1):
