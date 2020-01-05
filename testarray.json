@@ -13,31 +13,9 @@
     },
     {
       "Device_Type": "Phone",
-      "Device_Name": "iphone6splus",
-      "Table": "ios",
-      "OS_Version": "13.1",
-      "Asset_ID": "some_number",
-      "Serial_Num": "some_number",
-      "Alias": "locker",
-      "Name": "--",
-      "Team": "--"
-    },
-    {
-      "Device_Type": "Phone",
       "Device_Name": "iphonese",
       "Table": "ios",
       "OS_Version": "13.1.3",
-      "Asset_ID": "some_number",
-      "Serial_Num": "some_number",
-      "Alias": "locker",
-      "Name": "--",
-      "Team": "--"
-    },
-    {
-      "Device_Type": "Phone",
-      "Device_Name": "iphone7",
-      "Table": "ios",
-      "OS_Version": "13",
       "Asset_ID": "some_number",
       "Serial_Num": "some_number",
       "Alias": "locker",
@@ -51,28 +29,6 @@
       "OS_Version": "12.4",
       "Asset_ID": "some_number",
       "Serial_Num": "some_number",
-      "Alias": "locker",
-      "Name": "--",
-      "Team": "--"
-    },
-    {
-      "Device_Type": "Phone",
-      "Device_Name": "iphone8",
-      "Table": "ios",
-      "OS_Version": "11.3",
-      "Asset_ID": "some_number",
-      "Serial_Num": "some_number",
-      "Alias": "locker",
-      "Name": "--",
-      "Team": "--"
-    },
-    {
-      "Device_Type": "Phone",
-      "Device_Name": "iphonex",
-      "Table": "ios",
-      "OS_Version": "12",
-      "Asset_ID": "--",
-      "Serial_Num": "--",
       "Alias": "locker",
       "Name": "--",
       "Team": "--"
@@ -563,17 +519,6 @@
     },
     {
       "Device_Type": "Phone",
-      "Device_Name": "iphone6",
-      "Table": "ios",
-      "OS_Version": "11",
-      "Asset_ID": "some_number",
-      "Serial_Num": "some_number",
-      "Alias": "v-arupra",
-      "Name": "arul",
-      "Team": "officelens"
-    },
-    {
-      "Device_Type": "Phone",
       "Device_Name": "iphone8plus",
       "Table": "ios",
       "OS_Version": "12.3.1",
@@ -604,6 +549,61 @@
       "Alias": "v-arupra",
       "Name": "arul",
       "Team": "officelens"
+    },
+    {
+      "Device_Type": "Phone",
+      "Device_Name": "iphonex",
+      "Table": "ios",
+      "OS_Version": "12",
+      "Asset_ID": "--",
+      "Serial_Num": "--",
+      "Alias": "v-jokoth",
+      "Name": "joshitha",
+      "Team": "kaizala"
+    },
+    {
+      "Device_Type": "Phone",
+      "Device_Name": "iphone7",
+      "Table": "ios",
+      "OS_Version": "13",
+      "Asset_ID": "some_number",
+      "Serial_Num": "some_number",
+      "Alias": "v-teboy",
+      "Name": "tejaswi",
+      "Team": "wxp"
+    },
+    {
+      "Device_Type": "Phone",
+      "Device_Name": "iphone8",
+      "Table": "ios",
+      "OS_Version": "11.3",
+      "Asset_ID": "some_number",
+      "Serial_Num": "some_number",
+      "Alias": "v-amvutu",
+      "Name": "amulya",
+      "Team": "wxp"
+    },
+    {
+      "Device_Type": "Phone",
+      "Device_Name": "iphone6",
+      "Table": "ios",
+      "OS_Version": "11",
+      "Asset_ID": "some_number",
+      "Serial_Num": "some_number",
+      "Alias": "v-amvutu",
+      "Name": "amulya",
+      "Team": "wxp"
+    },
+    {
+      "Device_Type": "Phone",
+      "Device_Name": "iphone6splus",
+      "Table": "ios",
+      "OS_Version": "13.1",
+      "Asset_ID": "some_number",
+      "Serial_Num": "some_number",
+      "Alias": "v-amvutu",
+      "Name": "amulya",
+      "Team": "wxp"
     }
   ]
 }

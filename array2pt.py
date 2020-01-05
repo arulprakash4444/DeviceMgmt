@@ -10,5 +10,5 @@ def TheArray2PT(Array):
     print(pt)
 
 
-if __name__ == "__main__":
-    TheArray2PT(TheArray)
+# if __name__ == "__main__":
+#     TheArray2PT(TheArray)

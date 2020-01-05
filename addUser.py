@@ -1,9 +1,17 @@
 import json
+import time
+import clear
+import searchNmatch
 
 
-# ===================
-# ADDING A NEW PERSON
-# ===================
+# =================
+# ADDING A NEW USER
+# =================
+def printTitle():
+    print("=================")
+    print("ADDING A NEW USER")
+    print("=================")
+
 
 UserAttributes = ["Alias", "Name", "Team"]
 Teams = ["officelens", "wxp","kaizala", "visio"]
@@ -34,14 +42,28 @@ def makeUser():
             User[UserAttribute] = typeselect(Attr2Array[UserAttribute], "\nEnter a "+UserAttribute, "Enter "+UserAttribute+" number")
 
         else:
-            User[UserAttribute] = input("\nEnter the "+UserAttribute+":")
-            if User[UserAttribute] == "":
-                User[UserAttribute] = "None"
+            if UserAttribute == "Alias":
+                alias = input("\nEnter the " + UserAttribute + ":")
+                result = searchNmatch.simpleSearch("Users", alias, UserAttribute)
+                if result != -1:
+                    return -1
+                    
+                else:
+                    User[UserAttribute] = alias
 
+            else:
+                User[UserAttribute] = input("\nEnter the "+UserAttribute+":")
+                if User[UserAttribute] == "":
+                    User[UserAttribute] = "--"
+
+        clear.clear()
+        printTitle()
+        print("Previous input is:" + User[UserAttribute])
     return User
 
 
 def printUser(User):
+    print("")
     for attrib in UserAttributes:
         print(attrib+" : "+User[attrib])
 
@@ -63,21 +85,42 @@ def writeUser(User):
 
 
 def addUser():
-    theDevice = makeUser()
-    printUser(theDevice)
+    clear.clear()
+    printTitle()
+    theUser = makeUser()
+    clear.clear()
     
-    while(True):
-        choice = input("Are you sure you want to write to the file?(y/n):")
-        if slc(choice) == "y" or slc(choice) == "yes":
-            writeUser(theDevice)
-            break
 
-        elif slc(choice) == "n" or slc(choice) == "no":
-            print("Exiting Write to Devices.json...")
-            break
+    if theUser != -1:
 
-        else:
-            pass
+        printTitle()
+        printUser(theUser)
+    
+        while(True):
+            choice = input("Are you sure you want to write to the file?(y/n):")
+            if slc(choice) == "y" or slc(choice) == "yes":
+                writeUser(theUser)
+                clear.clear()
+                print("Adding the user to the file...")
+                time.sleep(2)
+                clear.clear()
+                break
+
+            elif slc(choice) == "n" or slc(choice) == "no":
+                clear.clear()
+                print("Exiting Write to Users.json...")
+                time.sleep(2)
+                clear.clear()
+                break
+
+            else:
+                pass
+
+    else:
+        print("A user with a same name is already taken!")
+        time.sleep(4)
+        clear.clear()
+
 
 if __name__ == "__main__":
     addUser()

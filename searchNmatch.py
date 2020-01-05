@@ -1,4 +1,7 @@
 import json
+import orchestrator
+import time
+import clear
 
 def jsonarraylen(filename):
 
@@ -95,21 +98,38 @@ def SearchAndMatch():
                     eraseEntry(devicedata[0])
                     entry = dictMerge(simpleSearch("Devices", device, "Device_Name"), userdata)
                     writeEntry(entry)
+                    clear.clear()
+                    print(device + " is transferred to " + user + ".")
+                    time.sleep(2)
+                    clear.clear()
                     break
 
                 elif slc(choice) == "n" or slc(choice) == "no":
                     print("Exiting Write to testarray.json...")
+                    clear.clear()
+                    print("Transfer of " + device + " to " + user + " is cancelled.")
+                    time.sleep(2)
+                    clear.clear()
                     break
 
                 else:
                     pass
 
 
+        else:
+            time.sleep(2)
+            clear.clear()
+
+    else:
+        time.sleep(2)
+        clear.clear()
+
+
 def inLocker(Device):
 
     Data = simpleSearch("testarray", Device["Device_Name"], "Device_Name", 1)
     
-    if Data:
+    if Data  != -1:
 
         if Data[0]["Alias"] != "locker":
             print("The device "+ Device["Device_Name"] +" is already assigned to " + Data[1] +"!")

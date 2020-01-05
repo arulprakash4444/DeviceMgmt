@@ -1,11 +1,13 @@
 import addDevice, addUser, removeDevice, removeUser
 import json
 import pprint
+import clear
+import time
 
 
 def simplMenu():
     while(True):
-        print("\n\n")
+        
         print("=================")
         print("=> SIMPLE MENU <=")
         print("=================")
@@ -16,7 +18,7 @@ def simplMenu():
         print("4.add users")
         print("5.remove devices")
         print("6.remove users")
-        print("7.exit")
+        print("7.Go back")
 
         choice = int(input("enter ur choice:"))
 
@@ -39,11 +41,15 @@ def simplMenu():
             removeUser.removeUser()
 
         elif choice == 7:
-            print("bye!")
+            clear.clear()
             break
+            
 
         else:
+            clear.clear()
             print("i ain't heared no choice like that!")
+            time.sleep(2)
+            clear.clear()
 
 if __name__ == "__main__":
     simplMenu()

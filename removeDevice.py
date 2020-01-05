@@ -2,12 +2,26 @@
 
 import json
 import pprint
-
+import time
+import clear
+import searchNmatch
 
 # for device in data["Devices"]:
 #     if device["name"] == "i phone9":
 #         deletedItem = data["Devices"].pop(data["Devices"].index(device))
 #         print(deletedItem, end="\n")
+
+def printTitle():
+    print("=================")
+    print("ERASING A DEVICE")
+    print("=================")
+
+
+DeviceAttributes = ["Device_Type", "Device_Name", "Table", "OS_Version", "Asset_ID", "Serial_Num"]
+def printDevice(Device):
+    print("")
+    for attrib in DeviceAttributes:
+        print(attrib+" : "+Device[attrib])
 
 
 def slc(string):
@@ -35,7 +49,7 @@ def simpleSearch(searchString):
     with open("Devices.json", "r") as f:
         data = json.load(f)
         for device in data["Devices"]:
-            if device["name"] == searchString:
+            if device["Device_Name"] == searchString:
                 print(device, end="\n") 
                 foundFlag = 1
                 return device
@@ -65,22 +79,49 @@ def eraseDevice(device4Deletion):
 
 
 def removeDevice():
-    viewDevices()
+    clear.clear()
+    printTitle()
+
     deviceName = input("Enter a device name to search:")
     theDevice = simpleSearch(deviceName)
+    clear.clear()
     
-    while(theDevice != -1):
-        choice = input("Are you sure you want to erase device from the file?(y/n):")
-        if slc(choice) == "y" or slc(choice) == "yes":
-            eraseDevice(theDevice)
-            break
 
-        elif slc(choice) == "n" or slc(choice) == "no":
-            print("Exiting Erase from Devices.json...")
-            break
+    if theDevice != -1:
+        printTitle()
+        printDevice(theDevice)
+        result = searchNmatch.simpleSearch("testarray", deviceName, "Device_Name", 1)
+        if result[1] != "locker":
+            print(deviceName + " is assigned to " + result[1] + "!")
+            print("Erasing the Device will remove the relation too!")
 
-        else:
-            pass
+        while(True):
+
+            choice = input("Are you sure you want to erase "+ deviceName +" from the file?(y/n):")
+            if slc(choice) == "y" or slc(choice) == "yes":
+                eraseDevice(theDevice)
+                searchNmatch.eraseEntry(result[0])
+                clear.clear()
+                print("Erasing the Device from the file...")
+                time.sleep(2)
+                clear.clear()
+                break
+
+            elif slc(choice) == "n" or slc(choice) == "no":
+                clear.clear()
+                print("Exiting Erase from Devices.json...")
+                time.sleep(2)
+                clear.clear()
+                break
+
+            else:
+                pass
+
+    
+    else:
+        print("Device not found")
+        time.sleep(2)
+        clear.clear()
 
 
 if __name__ == "__main__":

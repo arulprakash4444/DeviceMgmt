@@ -2,12 +2,26 @@
 
 import json
 import pprint
+import clear
+import time
+import searchNmatch
 
+
+def printTitle():
+    print("==============")
+    print("ERASING A USER")
+    print("==============")
 
 # for device in data["Devices"]:
 #     if device["name"] == "i phone9":
 #         deletedItem = data["Devices"].pop(data["Devices"].index(device))
 #         print(deletedItem, end="\n")
+
+UserAttributes = ["Alias", "Name", "Team"]
+def printUser(User):
+    print("")
+    for attrib in UserAttributes:
+        print(attrib+" : "+User[attrib])
 
 
 def slc(string):
@@ -35,7 +49,7 @@ def simpleSearch(searchString):
     with open("Users.json", "r") as f:
         data = json.load(f)
         for user in data["Users"]:
-            if user["vid"] == searchString:
+            if user["Alias"] == searchString:
                 print(user, end="\n") 
                 foundFlag = 1
                 return user
@@ -65,22 +79,49 @@ def eraseUser(user4Deletion):
 
 
 def removeUser():
-    viewUsers()
-    userVid = input("Enter a Alias to search:")
-    theUser = simpleSearch(userVid)
+    clear.clear()
+    printTitle()
+
+    Alias = input("Enter a Alias to search:")
+    theUser = simpleSearch(Alias)
+    clear.clear()
     
-    while(theUser != -1):
-        choice = input("Are you sure you want to erase user from the file?(y/n):")
-        if slc(choice) == "y" or slc(choice) == "yes":
-            eraseUser(theUser)
-            break
 
-        elif slc(choice) == "n" or slc(choice) == "no":
-            print("Exiting Erase from Users.json...")
-            break
+    if theUser != -1:
 
-        else:
-            pass
+        printTitle()
+        printUser(theUser)
+
+        # result = searchNmatch.simpleSearch("testarray", Alias, "Alias", 1)
+        # if result[1] != "locker":
+        #     print(deviceName + " is assigned to " + result[1] + "!")
+        #     print("Erasing the Device will remove the relation too!")
+
+        while(True):
+            choice = input("Are you sure you want to erase "+ Alias +" from the file?(y/n):")
+            if slc(choice) == "y" or slc(choice) == "yes":
+                eraseUser(theUser)
+                clear.clear()
+                print("Erasing the User from the file...")
+                time.sleep(2)
+                clear.clear()
+                break
+
+            elif slc(choice) == "n" or slc(choice) == "no":
+                clear.clear()
+                print("Exiting Erase from Users.json...")
+                time.sleep(2)
+                clear.clear()
+                break
+
+            else:
+                pass
+
+    else:
+        print("User not found!")
+        time.sleep(2)
+        clear.clear()
+
 
 
 if __name__ == "__main__":

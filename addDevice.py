@@ -1,10 +1,18 @@
 
 import json
-
+import clear
+import time
+import searchNmatch
 
 # ===================
 # ADDING A NEW DEVICE
 # ===================
+
+def printTitle():
+    print("===================")
+    print("ADDING A NEW DEVICE")
+    print("===================")
+
 
 DeviceAttributes = ["Device_Type", "Device_Name", "Table", "OS_Version", "Asset_ID", "Serial_Num"]
 Device_Types = ["Phone", "Tablet", "Cable", "Adapter", "Accessories"]
@@ -36,14 +44,28 @@ def makeDevice():
             Device[DeviceAttribute] = typeselect(Attr2Array[DeviceAttribute], "\nEnter a "+DeviceAttribute, "Enter "+DeviceAttribute+" number")
 
         else:
-            Device[DeviceAttribute] = input("\nEnter the "+DeviceAttribute+":")
-            if Device[DeviceAttribute] == "":
-                Device[DeviceAttribute] = "--"
+            if DeviceAttribute == "Device_Name":
+                DeviceName = input("\nEnter the "+DeviceAttribute+":")
+                result = searchNmatch.simpleSearch("Devices", DeviceName, DeviceAttribute)
+                if result != -1:
+                    return -1
+                    
+                else:
+                    Device[DeviceAttribute] = DeviceName
+            else:
+                Device[DeviceAttribute] = input("\nEnter the "+DeviceAttribute+":")
+                if Device[DeviceAttribute] == "":
+                    Device[DeviceAttribute] = "--"
+        
+        clear.clear()
+        printTitle()
+        print("Previous input is:" + Device[DeviceAttribute])
 
     return Device
 
 
 def printDevice(Device):
+    print("")
     for attrib in DeviceAttributes:
         print(attrib+" : "+Device[attrib])
 
@@ -65,21 +87,43 @@ def writeDevice(Device):
 
 
 def addDevice():
+    clear.clear()
+    printTitle()
     theDevice = makeDevice()
-    printDevice(theDevice)
+    clear.clear()
     
-    while(True):
-        choice = input("Are you sure you want to write to the file?(y/n):")
-        if slc(choice) == "y" or slc(choice) == "yes":
-            writeDevice(theDevice)
-            break
+    
+    if theDevice != -1:
 
-        elif slc(choice) == "n" or slc(choice) == "no":
-            print("Exiting Write to Devices.json...")
-            break
+        printTitle()
+        printDevice(theDevice)
+        while(True):
+            choice = input("Are you sure you want to write to the file?(y/n):")
+            if slc(choice) == "y" or slc(choice) == "yes":
+                writeDevice(theDevice)
+                searchNmatch.inLocker(theDevice)
+                clear.clear()
+                print("Adding the device to the file...")
+                time.sleep(2)
+                clear.clear()
+                break
 
-        else:
-            pass
+            elif slc(choice) == "n" or slc(choice) == "no":
+                clear.clear()
+                print("Exiting Write to Devices.json...")
+                time.sleep(2)
+                clear.clear()
+                break
+
+            else:
+                pass
+
+    else:
+        print("A device with a same name is already taken!")
+        print('Try adding "_#(number)" to the end.')
+        time.sleep(4)
+        clear.clear()
+
 
 if __name__ == "__main__":
     addDevice()
