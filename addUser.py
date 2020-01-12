@@ -117,7 +117,7 @@ def addUser():
                 pass
 
     else:
-        print("A user with a same name is already taken!")
+        print("A user with a same Alias is already taken!")
         time.sleep(4)
         clear.clear()
 

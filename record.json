@@ -1,0 +1,87 @@
+{
+  "record": {
+    "iphone6": [
+      {
+        "Alias": "v-teboy",
+        "checkin": "13-January-2020 Mon - 00:22 AM",
+        "checkout": "13-January-2020 Mon - 00:42 AM"
+      },
+      {
+        "Alias": "v-teboy",
+        "checkin": "13-January-2020 Mon - 00:20 AM",
+        "checkout": "13-January-2020 Mon - 00:20 AM"
+      },
+      {
+        "Alias": "v-arupra",
+        "checkin": "13-January-2020 Mon - 00:17 AM",
+        "checkout": "13-January-2020 Mon - 00:20 AM"
+      },
+      {
+        "Alias": "v-amvutu",
+        "checkin": "13-January-2020 Mon - 00:02 AM",
+        "checkout": "13-January-2020 Mon - 00:05 AM"
+      },
+      {
+        "Alias": "v-amvutu",
+        "checkin": "13-January-2020 Mon - 00:02 AM",
+        "checkout": "13-January-2020 Mon - 00:02 AM"
+      },
+      {
+        "Alias": "v-teboy",
+        "checkin": "12-January-2020 Sun - 19:43 PM",
+        "checkout": "12-January-2020 Sun - 19:44 PM"
+      },
+      {
+        "Alias": "v-arupra",
+        "checkin": "12-January-2020 Sun - 19:41 PM",
+        "checkout": "12-January-2020 Sun - 19:43 PM"
+      }
+    ],
+    "iphone7": [
+      {
+        "Alias": "v-teboy",
+        "checkin": "13-January-2020 Mon - 00:22 AM",
+        "checkout": "13-January-2020 Mon - 00:42 AM"
+      },
+      {
+        "Alias": "v-amvutu",
+        "checkin": "13-January-2020 Mon - 00:18 AM",
+        "checkout": "13-January-2020 Mon - 00:22 AM"
+      },
+      {
+        "Alias": "v-amvutu",
+        "checkin": "12-January-2020 Sun - 19:42 PM",
+        "checkout": "12-January-2020 Sun - 19:46 PM"
+      }
+    ],
+    "motog": [
+      {
+        "Alias": "v-souma",
+        "checkin": "13-January-2020 Mon - 00:20 AM",
+        "checkout": "13-January-2020 Mon - 00:26 AM"
+      },
+      {
+        "Alias": "v-souma",
+        "checkin": "13-January-2020 Mon - 00:19 AM",
+        "checkout": "13-January-2020 Mon - 00:20 AM"
+      },
+      {
+        "Alias": "v-souma",
+        "checkin": "12-January-2020 Sun - 19:43 PM",
+        "checkout": "12-January-2020 Sun - 19:46 PM"
+      },
+      {
+        "Alias": "v-souma",
+        "checkin": "12-January-2020 Sun - 19:43 PM",
+        "checkout": "12-January-2020 Sun - 19:43 PM"
+      }
+    ],
+    "oneplus5": [
+      {
+        "Alias": "v-teboy",
+        "checkin": "13-January-2020 Mon - 00:23 AM",
+        "checkout": "13-January-2020 Mon - 00:42 AM"
+      }
+    ]
+  }
+}

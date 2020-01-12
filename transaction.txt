@@ -1,0 +1,36 @@
+
+motog  locker --> v-souma. locker to user trigger.
+oneplus5  v-amvutu --> locker. user to locker trigger.
+iphone6  v-amvutu --> v-arupra. user to user trigger.
+iphone7  v-teboy --> v-teboy. user to user trigger.
+
+
+iphone6  locker --> v-arupra. locker to user trigger.
+iphone7  locker --> v-amvutu. locker to user trigger.
+motog  locker --> v-souma. locker to user trigger.
+iphone6  v-arupra --> v-teboy. user to user trigger.
+motog  v-souma --> v-souma. user to user trigger.
+iphone6  v-teboy --> locker. user to locker trigger.
+motog  locker --> v-souma. locker to user trigger.
+iphone6  locker --> v-arupra. locker to user trigger.
+iphone7  locker --> v-amvutu. locker to user trigger.
+motog  locker --> v-souma. locker to user trigger.
+iphone6  v-arupra --> v-teboy. user to user trigger.
+motog  v-souma --> v-souma. user to user trigger.
+iphone6  v-teboy --> locker. user to locker trigger.
+iphone8  locker --> v-teboy. locker to user trigger.
+iphone6  locker --> v-amvutu. locker to user trigger.
+iphone6  v-amvutu --> v-amvutu. user to user trigger.
+iphone6  v-amvutu --> locker. user to locker trigger.
+
+
+
+iphone6  locker --> v-arupra. locker to user trigger.
+iphone7  locker --> v-amvutu. locker to user trigger.
+motog  locker --> v-souma. locker to user trigger.
+iphone6  v-arupra --> v-teboy. user to user trigger.
+motog  v-souma --> v-souma. user to user trigger.
+iphone6  v-teboy --> locker. user to locker trigger.
+iphone6  locker --> v-teboy. locker to user trigger.
+iphone7  v-amvutu --> v-teboy. user to user trigger.
+oneplus5  locker --> v-teboy. locker to user trigger.

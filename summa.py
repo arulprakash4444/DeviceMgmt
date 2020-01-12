@@ -24,11 +24,34 @@
 print("._______MAIN MENU_______.")
 print("|                       |")
 
+# 
 
 
+import json
+# simpleSearch("Devices", "iphonese", "name", returnUser flag)
+def simpleSearch(fileName, searchString, fieldName, multiple = 0):
+
+    with open(fileName+".json", "r") as f:
+        data = json.load(f)
+
+        result = []
+
+        flag = 0
+        for item in data[fileName]:
+            if item[fieldName] == searchString:
+                flag = 1
+                result.append(item)
+                
+                if multiple == 1:
+                    return result
+
+                else:
+                    return result[0]
 
 
-    
+        if flag == 0:
+            print("sorry not available.")
+            return -1
     
 
 

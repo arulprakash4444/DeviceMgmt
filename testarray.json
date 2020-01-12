@@ -46,31 +46,9 @@
     },
     {
       "Device_Type": "Phone",
-      "Device_Name": "iphonexr",
-      "Table": "ios",
-      "OS_Version": "12.4.1",
-      "Asset_ID": "--",
-      "Serial_Num": "--",
-      "Alias": "locker",
-      "Name": "--",
-      "Team": "--"
-    },
-    {
-      "Device_Type": "Phone",
       "Device_Name": "samsunggalaxynote4",
       "Table": "android",
       "OS_Version": "4.4.4",
-      "Asset_ID": "--",
-      "Serial_Num": "--",
-      "Alias": "locker",
-      "Name": "--",
-      "Team": "--"
-    },
-    {
-      "Device_Type": "Phone",
-      "Device_Name": "motog",
-      "Table": "android",
-      "OS_Version": "5.0.2",
       "Asset_ID": "--",
       "Serial_Num": "--",
       "Alias": "locker",
@@ -519,36 +497,25 @@
     },
     {
       "Device_Type": "Phone",
+      "Device_Name": "iphone6splus",
+      "Table": "ios",
+      "OS_Version": "13.1",
+      "Asset_ID": "some_number",
+      "Serial_Num": "some_number",
+      "Alias": "locker",
+      "Name": "--",
+      "Team": "--"
+    },
+    {
+      "Device_Type": "Phone",
       "Device_Name": "iphone8plus",
       "Table": "ios",
       "OS_Version": "12.3.1",
       "Asset_ID": "some_number",
       "Serial_Num": "some_number",
-      "Alias": "v-souma",
-      "Name": "soujanya",
-      "Team": "officelens"
-    },
-    {
-      "Device_Type": "Phone",
-      "Device_Name": "oneplus5",
-      "Table": "android",
-      "OS_Version": "7.1.1",
-      "Asset_ID": "--",
-      "Serial_Num": "--",
-      "Alias": "v-amvutu",
-      "Name": "amulya",
-      "Team": "wxp"
-    },
-    {
-      "Device_Type": "Accessories",
-      "Device_Name": "keyboard",
-      "Table": "ios",
-      "OS_Version": "--",
-      "Asset_ID": "--",
-      "Serial_Num": "--",
-      "Alias": "v-arupra",
-      "Name": "arul",
-      "Team": "officelens"
+      "Alias": "locker",
+      "Name": "--",
+      "Team": "--"
     },
     {
       "Device_Type": "Phone",
@@ -557,9 +524,53 @@
       "OS_Version": "12",
       "Asset_ID": "--",
       "Serial_Num": "--",
-      "Alias": "v-jokoth",
-      "Name": "joshitha",
-      "Team": "kaizala"
+      "Alias": "locker",
+      "Name": "--",
+      "Team": "--"
+    },
+    {
+      "Device_Type": "Phone",
+      "Device_Name": "iphonexr",
+      "Table": "ios",
+      "OS_Version": "12.4.1",
+      "Asset_ID": "--",
+      "Serial_Num": "--",
+      "Alias": "locker",
+      "Name": "--",
+      "Team": "--"
+    },
+    {
+      "Device_Type": "Accessories",
+      "Device_Name": "keyboard",
+      "Table": "ios",
+      "OS_Version": "--",
+      "Asset_ID": "--",
+      "Serial_Num": "--",
+      "Alias": "locker",
+      "Name": "--",
+      "Team": "--"
+    },
+    {
+      "Device_Type": "Phone",
+      "Device_Name": "motog",
+      "Table": "android",
+      "OS_Version": "5.0.2",
+      "Asset_ID": "--",
+      "Serial_Num": "--",
+      "Alias": "locker",
+      "Name": "--",
+      "Team": "--"
+    },
+    {
+      "Device_Type": "Phone",
+      "Device_Name": "iphone6",
+      "Table": "ios",
+      "OS_Version": "11",
+      "Asset_ID": "--",
+      "Serial_Num": "--",
+      "Alias": "locker",
+      "Name": "--",
+      "Team": "--"
     },
     {
       "Device_Type": "Phone",
@@ -568,42 +579,20 @@
       "OS_Version": "13",
       "Asset_ID": "some_number",
       "Serial_Num": "some_number",
-      "Alias": "v-teboy",
-      "Name": "tejaswi",
-      "Team": "wxp"
+      "Alias": "locker",
+      "Name": "--",
+      "Team": "--"
     },
     {
       "Device_Type": "Phone",
-      "Device_Name": "iphone8",
-      "Table": "ios",
-      "OS_Version": "11.3",
-      "Asset_ID": "some_number",
-      "Serial_Num": "some_number",
-      "Alias": "v-amvutu",
-      "Name": "amulya",
-      "Team": "wxp"
-    },
-    {
-      "Device_Type": "Phone",
-      "Device_Name": "iphone6",
-      "Table": "ios",
-      "OS_Version": "11",
-      "Asset_ID": "some_number",
-      "Serial_Num": "some_number",
-      "Alias": "v-amvutu",
-      "Name": "amulya",
-      "Team": "wxp"
-    },
-    {
-      "Device_Type": "Phone",
-      "Device_Name": "iphone6splus",
-      "Table": "ios",
-      "OS_Version": "13.1",
-      "Asset_ID": "some_number",
-      "Serial_Num": "some_number",
-      "Alias": "v-amvutu",
-      "Name": "amulya",
-      "Team": "wxp"
+      "Device_Name": "oneplus5",
+      "Table": "android",
+      "OS_Version": "7.1.1",
+      "Asset_ID": "--",
+      "Serial_Num": "--",
+      "Alias": "locker",
+      "Name": "--",
+      "Team": "--"
     }
   ]
 }

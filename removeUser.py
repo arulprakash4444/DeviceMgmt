@@ -5,6 +5,7 @@ import pprint
 import clear
 import time
 import searchNmatch
+import recordMani
 
 
 def printTitle():
@@ -92,15 +93,35 @@ def removeUser():
         printTitle()
         printUser(theUser)
 
-        # result = searchNmatch.simpleSearch("testarray", Alias, "Alias", 1)
-        # if result[1] != "locker":
-        #     print(deviceName + " is assigned to " + result[1] + "!")
-        #     print("Erasing the Device will remove the relation too!")
+        result = searchNmatch.simpleSearch("testarray", Alias, "Alias", 1)
+        pprint.pprint(result)
+        
+        if result != -1:
+            print("\n" + str(len(result)) + " Device(s):")
+            for item in result:
+                print(item["Device_Name"])
+            
+            print("Is/Are assigned to " + Alias + "!")
+            print("Erasing the user will transfer the devices to the locker!")
 
         while(True):
             choice = input("Are you sure you want to erase "+ Alias +" from the file?(y/n):")
             if slc(choice) == "y" or slc(choice) == "yes":
                 eraseUser(theUser)
+
+                # deleting the item from the relations for every device
+                for item in result:
+                    searchNmatch.eraseEntry(item)
+
+                # assigning every device to locker and writing to relations
+                for item in result:
+                    dev = searchNmatch.simpleSearch("Devices", item["Device_Name"], "Device_Name")
+                    searchNmatch.inLocker(dev)
+
+                # assigning checkout time to every device on the user
+                for item in result:
+                    recordMani.modCout("record", item["Device_Name"])
+
                 clear.clear()
                 print("Erasing the User from the file...")
                 time.sleep(2)

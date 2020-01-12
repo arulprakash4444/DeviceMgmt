@@ -66,7 +66,7 @@ def arrayDepSort(array, index, table):
 
         for j in array:
 
-            if i in j[index]:
+            if i == j[index]:
 
                 sorted_array.append(j)
                 array.remove(j)

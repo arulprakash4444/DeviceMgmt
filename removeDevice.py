@@ -5,6 +5,7 @@ import pprint
 import time
 import clear
 import searchNmatch
+import recordMani
 
 # for device in data["Devices"]:
 #     if device["name"] == "i phone9":
@@ -90,9 +91,9 @@ def removeDevice():
     if theDevice != -1:
         printTitle()
         printDevice(theDevice)
-        result = searchNmatch.simpleSearch("testarray", deviceName, "Device_Name", 1)
-        if result[1] != "locker":
-            print(deviceName + " is assigned to " + result[1] + "!")
+        result = searchNmatch.simpleSearch("testarray", deviceName, "Device_Name")
+        if result["Alias"] != "locker":
+            print(deviceName + " is assigned to " + result["Alias"] + "!")
             print("Erasing the Device will remove the relation too!")
 
         while(True):
@@ -100,7 +101,8 @@ def removeDevice():
             choice = input("Are you sure you want to erase "+ deviceName +" from the file?(y/n):")
             if slc(choice) == "y" or slc(choice) == "yes":
                 eraseDevice(theDevice)
-                searchNmatch.eraseEntry(result[0])
+                searchNmatch.eraseEntry(result)
+                recordMani.delRdev("record", deviceName)
                 clear.clear()
                 print("Erasing the Device from the file...")
                 time.sleep(2)

@@ -2,14 +2,6 @@
   "Devices": [
     {
       "Device_Type": "Phone",
-      "Device_Name": "iphone6",
-      "Table": "ios",
-      "OS_Version": "11",
-      "Asset_ID": "some_number",
-      "Serial_Num": "some_number"
-    },
-    {
-      "Device_Type": "Phone",
       "Device_Name": "iphone6s",
       "Table": "ios",
       "OS_Version": "10.3.2",
@@ -45,14 +37,6 @@
       "Device_Name": "iphone7plus",
       "Table": "ios",
       "OS_Version": "12.4",
-      "Asset_ID": "some_number",
-      "Serial_Num": "some_number"
-    },
-    {
-      "Device_Type": "Phone",
-      "Device_Name": "iphone8",
-      "Table": "ios",
-      "OS_Version": "11.3",
       "Asset_ID": "some_number",
       "Serial_Num": "some_number"
     },
@@ -437,6 +421,14 @@
       "Device_Name": "btypecable(white)_#2",
       "Table": "android",
       "OS_Version": "--",
+      "Asset_ID": "--",
+      "Serial_Num": "--"
+    },
+    {
+      "Device_Type": "Phone",
+      "Device_Name": "iphone6",
+      "Table": "ios",
+      "OS_Version": "11",
       "Asset_ID": "--",
       "Serial_Num": "--"
     }

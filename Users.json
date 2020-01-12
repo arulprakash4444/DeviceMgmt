@@ -6,21 +6,6 @@
       "Team": "officelens"
     },
     {
-      "Alias": "v-amvutu",
-      "Name": "amulya",
-      "Team": "wxp"
-    },
-    {
-      "Alias": "v-teboy",
-      "Name": "tejaswi",
-      "Team": "wxp"
-    },
-    {
-      "Alias": "v-souma",
-      "Name": "soujanya",
-      "Team": "officelens"
-    },
-    {
       "Alias": "v-lajujj",
       "Name": "lavanya",
       "Team": "kaizala"
@@ -59,6 +44,16 @@
       "Alias": "locker",
       "Name": "--",
       "Team": "--"
+    },
+    {
+      "Alias": "v-sajara",
+      "Name": "sandhya",
+      "Team": "wxp"
+    },
+    {
+      "Alias": "v-amvutu",
+      "Name": "amulya",
+      "Team": "wxp"
     }
   ]
 }
